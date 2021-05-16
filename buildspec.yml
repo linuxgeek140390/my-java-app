@@ -21,7 +21,7 @@ phases:
       - mvn -v
       - wget https://apachemirror.wuchna.com/tomcat/tomcat-10/v10.0.6/bin/apache-tomcat-10.0.6.zip
       - unzip apache-tomcat-10.0.6.zip
-      - mv apache-tomcat /opt/
+      - mv apache-tomcat-10.0.6 /opt/apache-tomcat
       - useradd tomcat 
       - chown -R tomcat:tomcat /opt/apache-tomcat/
   build:
