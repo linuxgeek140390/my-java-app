@@ -4,26 +4,26 @@ phases:
   pre_build:
     commands:
       - yum update -y 
-      - sudo yum install git -y 
-      - sudo yum -y install ruby
-      - sudo yum -y install wget
+      - yum install git -y 
+      - yum -y install ruby
+      - yum -y install wget
       - wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
-      - sudo chmod +x ./install
-      - sudo ./install auto
-      - sudo yum install -y python-pip
-      - sudo pip3 install awscli
-      - sudo yum install java -y
-      - sudo wget https://apachemirror.wuchna.com/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip
-      - sudo unzip apache-maven-3.8.1-bin.zip
-      - sudo mv apache-maven-3.8.1 /opt/apache-maven
+      - chmod +x ./install
+      - ./install auto
+      - yum install -y python-pip
+      - pip3 install awscli
+      - yum install java -y
+      - wget https://apachemirror.wuchna.com/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip
+      - unzip apache-maven-3.8.1-bin.zip
+      - mv apache-maven-3.8.1 /opt/apache-maven
       - PATH=$PATH:/opt/apache-maven/bin/
       - echo $PATH
       - mvn -v
-      - sudo wget https://apachemirror.wuchna.com/tomcat/tomcat-10/v10.0.6/bin/apache-tomcat-10.0.6.zip
-      - sudo unzip apache-tomcat-10.0.6.zip
-      - sudo mv apache-tomcat /opt/
-      - sudo useradd tomcat 
-      - sudo chown -R tomcat:tomcat /opt/apache-tomcat/
+      - wget https://apachemirror.wuchna.com/tomcat/tomcat-10/v10.0.6/bin/apache-tomcat-10.0.6.zip
+      - unzip apache-tomcat-10.0.6.zip
+      - mv apache-tomcat /opt/
+      - useradd tomcat 
+      - chown -R tomcat:tomcat /opt/apache-tomcat/
   build:
     commands:
       - echo Entered the build phase...
