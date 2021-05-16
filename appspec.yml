@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
-      - location: .
+      - location: ./before_install.sh
         runas: root
   AfterInstall:
-      - location: .
+      - location: ./after_install.sh
         runas: root
