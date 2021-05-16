@@ -34,4 +34,6 @@ artifacts:
   files:
     - target/order-service.war
     - appspec.yml
+    - scripts/before_install.sh
+    - scripts/after_install.sh
   discard-paths: yes
