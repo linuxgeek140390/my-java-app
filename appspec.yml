@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
-      - location: /
+      - location: .
         runas: root
   AfterInstall:
-      - location: /
+      - location: .
         runas: root
