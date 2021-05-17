@@ -2,4 +2,4 @@ version: 0.0
 os: linux
 files:
   - source: target/order-service.war
-    destination: /opt/apache-tomcat/web-apps
+    destination: /opt/apache-tomcat/webapps/
