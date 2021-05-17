@@ -36,4 +36,5 @@ artifacts:
     - appspec.yml
     - scripts/before_install.sh
     - scripts/after_install.sh
+  name: java-app-$(date +%Y-%m-%d) 
   discard-paths: yes
